@@ -27,7 +27,11 @@ function App() {
           <p>Explora lugares únicos para quedarte en tu próxima aventura.</p>
         </section>
 
-        <SearchBar value={search} onChange={setSearch} />
+        <SearchBar
+          value={search}
+          onChange={setSearch}
+          onClear={() => setSearch("")}
+        />
         <PropertyList properties={filteredProperties} />
       </main>
     </div>

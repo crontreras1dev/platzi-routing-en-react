@@ -45,15 +45,26 @@ img {
 }
 
 .search-section {
+  display: flex;
+  gap: 0.75rem;
   margin-bottom: 2rem;
 }
 
 .search-section input {
-  width: 100%;
+  flex: 1;
   padding: 0.9rem 1rem;
   border: 1px solid #ddd;
   border-radius: 999px;
   font-size: 1rem;
+}
+
+.search-section button {
+  border: none;
+  border-radius: 999px;
+  padding: 0 1.25rem;
+  background: #ff385c;
+  color: white;
+  cursor: pointer;
 }
 
 .properties-grid {
