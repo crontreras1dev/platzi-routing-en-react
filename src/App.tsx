@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Property } from "./types/property";
 import { Header } from "./components/layout/Header";
+import { Hero } from "./components/ui/Hero";
 import { SearchBar } from "./components/ui/SearchBar";
 import { PropertyList } from "./components/properties/PropertyList";
 import { properties } from "./data/properties";
@@ -33,10 +34,7 @@ function App() {
       <Header />
 
       <main className="main-content">
-        <section className="hero">
-          <h2>Encuentra tu próximo alojamiento</h2>
-          <p>Explora lugares únicos para quedarte en tu próxima aventura.</p>
-        </section>
+        <Hero />
 
         <SearchBar
           value={search}
