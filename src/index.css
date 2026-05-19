@@ -13,3 +13,45 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h1 {
+  margin: 0;
+  color: #ff385c;
+}
+
+.main-content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  font-size: 1rem;
+}
