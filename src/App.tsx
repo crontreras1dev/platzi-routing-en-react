@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { Property } from "./types/property";
 import { Header } from "./components/layout/Header";
 import { SearchBar } from "./components/ui/SearchBar";
 import { PropertyList } from "./components/properties/PropertyList";
@@ -7,9 +8,9 @@ import { filterProperties } from "./utils/filterProperties";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [propertyList, setPropertyList] = useState([]);
+  const [propertyList, setPropertyList] = useState<Property[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setIsLoading(true);

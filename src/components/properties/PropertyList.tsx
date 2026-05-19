@@ -1,6 +1,11 @@
+import type { Property } from "../../types/property";
 import { PropertyCard } from "./PropertyCard";
 
-export function PropertyList({ properties }) {
+type PropertyListProps = {
+  properties: Property[];
+};
+
+export function PropertyList({ properties }: PropertyListProps) {
   if (properties.length === 0) {
     return (
       <section className="properties-section">
@@ -15,14 +20,7 @@ export function PropertyList({ properties }) {
       <h3>Alojamientos disponibles</h3>
       <div className="properties-grid">
         {properties.map((property) => (
-          <PropertyCard
-            key={property.id}
-            title={property.title}
-            location={property.location}
-            price={property.price}
-            image={property.image}
-            type={property.type}
-          />
+          <PropertyCard key={property.id} property={property} />
         ))}
       </div>
     </section>
