@@ -1,8 +1,8 @@
-# Curso de React.js Básico — Clon estilo Platzi BNB
+# Curso de React.js Básico — Clon estilo Platzi-host
 
-Curso práctico de React.js donde construimos paso a paso la **home** de un clon sencillo inspirado en Platzi BNB. La mayor parte del curso se desarrolla con **JavaScript** para enfocarnos en los fundamentos de React. Cerca del final, actualizamos el proyecto a **TypeScript**.
+Curso práctico de React.js donde construimos paso a paso la **home** de un clon sencillo inspirado en Platzi-host. La mayor parte del curso se desarrolla con **JavaScript** para enfocarnos en los fundamentos de React. Cerca del final, actualizamos el proyecto a **TypeScript**.
 
-## Proyecto: Platzi-BNB
+## Proyecto: Platzi-host
 
 Una aplicación web con:
 - Header principal

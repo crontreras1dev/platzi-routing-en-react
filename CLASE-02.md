@@ -8,8 +8,8 @@ Crear la base técnica del proyecto con React y Vite usando JavaScript.
 
 1. Crear el proyecto con Vite:
    ```bash
-   npm create vite@latest platzi-bnb -- --template react
-   cd platzi-bnb
+   npm create vite@latest platzi-host -- --template react
+   cd platzi-host
    npm install
    npm run dev
    ```

@@ -2,11 +2,11 @@
 
 ## Objetivo
 
-Entender qué vamos a construir, por qué usaremos un clon estilo Platzi BNB y cómo estará organizado el curso.
+Entender qué vamos a construir, por qué usaremos un clon estilo Platzi-host y cómo estará organizado el curso.
 
 ## ¿Qué construiremos?
 
-Un clon sencillo inspirado en Platzi BNB llamado **Platzi-BNB**. El proyecto tendrá:
+Un clon sencillo inspirado en Platzi-host llamado **Platzi-host**. El proyecto tendrá:
 
 - Un **header** principal
 - Una **sección hero** de bienvenida
