@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Header } from "./components/Header";
-import { SearchBar } from "./components/SearchBar";
-import { PropertyList } from "./components/PropertyList";
+import { Header } from "./components/layout/Header";
+import { SearchBar } from "./components/ui/SearchBar";
+import { PropertyList } from "./components/properties/PropertyList";
 import { properties } from "./data/properties";
+import { filterProperties } from "./utils/filterProperties";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -25,15 +26,7 @@ function App() {
     }, 1000);
   }, []);
 
-  const filteredProperties = propertyList.filter((property) => {
-    const searchText = search.toLowerCase();
-
-    return (
-      property.title.toLowerCase().includes(searchText) ||
-      property.location.toLowerCase().includes(searchText) ||
-      property.type.toLowerCase().includes(searchText)
-    );
-  });
+  const filteredProperties = filterProperties(propertyList, search);
 
   return (
     <div className="app">
