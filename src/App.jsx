@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 import { SearchBar } from "./components/SearchBar";
 import { PropertyList } from "./components/PropertyList";
+import { properties } from "./data/properties";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         </section>
 
         <SearchBar />
-        <PropertyList />
+        <PropertyList properties={properties} />
       </main>
     </div>
   );
