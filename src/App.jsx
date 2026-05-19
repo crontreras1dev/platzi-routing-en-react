@@ -18,9 +18,9 @@ function App() {
         </section>
 
         <p>Búsqueda actual: {search}</p>
-        <button onClick={() => setSearch("Santiago")}>Buscar Santiago</button>
 
-        <SearchBar />
+        <SearchBar value={search} onChange={setSearch} />
+        <button onClick={() => setSearch("")}>Limpiar búsqueda</button>
         <PropertyList properties={properties} />
       </main>
     </div>
