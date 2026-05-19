@@ -7,10 +7,21 @@ import { properties } from "./data/properties";
 function App() {
   const [search, setSearch] = useState("");
   const [propertyList, setPropertyList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setIsLoading(true);
+    setError(null);
+
     setTimeout(() => {
-      setPropertyList(properties);
+      try {
+        setPropertyList(properties);
+      } catch {
+        setError("No pudimos cargar las propiedades.");
+      } finally {
+        setIsLoading(false);
+      }
     }, 1000);
   }, []);
 
@@ -39,7 +50,14 @@ function App() {
           onChange={setSearch}
           onClear={() => setSearch("")}
         />
-        <PropertyList properties={filteredProperties} />
+
+        {isLoading && <p>Cargando propiedades...</p>}
+
+        {error && <p>{error}</p>}
+
+        {!isLoading && !error && (
+          <PropertyList properties={filteredProperties} />
+        )}
       </main>
     </div>
   );
