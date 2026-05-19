@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #f7f7f7;
-  color: #222;
+  background: #0f172a;
+  color: #eff3f8;
 }
 
 img {
@@ -19,14 +19,14 @@ img {
 }
 
 .header {
-  background: white;
+  background: #121f3d;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #24385b;
 }
 
 .header h1 {
   margin: 0;
-  color: #ff385c;
+  color: #98ca3f;
 }
 
 .main-content {
@@ -53,7 +53,7 @@ img {
 .search-section input {
   flex: 1;
   padding: 0.9rem 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #24385b;
   border-radius: 999px;
   font-size: 1rem;
 }
@@ -62,8 +62,8 @@ img {
   border: none;
   border-radius: 999px;
   padding: 0 1.25rem;
-  background: #ff385c;
-  color: white;
+  background: #98ca3f;
+  color: #0f172a;
   cursor: pointer;
 }
 
@@ -74,10 +74,10 @@ img {
 }
 
 .property-card {
-  background: white;
+  background: #121f3d;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
 .property-card img {
@@ -88,4 +88,13 @@ img {
 
 .property-card-content {
   padding: 1rem;
+}
+
+.search-section input {
+  background: #0f172a;
+  color: #eff3f8;
+}
+
+.search-section input::placeholder {
+  color: #8da2c0;
 }
