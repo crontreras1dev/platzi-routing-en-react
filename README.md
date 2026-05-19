@@ -14,7 +14,7 @@ Una aplicación web con:
 
 ## Tecnologías
 
-- React 18+
+- React 19
 - Vite
 - JavaScript (clases 1–15)
 - TypeScript (clases 16–18)
