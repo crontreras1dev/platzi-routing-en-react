@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { SearchBar } from "./components/SearchBar";
 import { PropertyList } from "./components/PropertyList";
@@ -6,8 +6,15 @@ import { properties } from "./data/properties";
 
 function App() {
   const [search, setSearch] = useState("");
+  const [propertyList, setPropertyList] = useState([]);
 
-  const filteredProperties = properties.filter((property) => {
+  useEffect(() => {
+    setTimeout(() => {
+      setPropertyList(properties);
+    }, 1000);
+  }, []);
+
+  const filteredProperties = propertyList.filter((property) => {
     const searchText = search.toLowerCase();
 
     return (
