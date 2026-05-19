@@ -13,10 +13,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setIsLoading(true);
-    setError(null);
-
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       try {
         setPropertyList(properties);
       } catch {
@@ -25,6 +22,8 @@ function App() {
         setIsLoading(false);
       }
     }, 1000);
+
+    return () => clearTimeout(timerId);
   }, []);
 
   const filteredProperties = filterProperties(propertyList, search);
