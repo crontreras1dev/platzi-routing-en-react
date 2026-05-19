@@ -1,9 +1,11 @@
+import { Header } from "./components/Header";
+import { SearchBar } from "./components/SearchBar";
+import { PropertyList } from "./components/PropertyList";
+
 function App() {
   return (
     <div className="app">
-      <header className="header">
-        <h1>StayFinder</h1>
-      </header>
+      <Header />
 
       <main className="main-content">
         <section className="hero">
@@ -11,13 +13,8 @@ function App() {
           <p>Explora lugares únicos para quedarte en tu próxima aventura.</p>
         </section>
 
-        <section className="search-section">
-          <input type="text" placeholder="Buscar por ciudad" />
-        </section>
-
-        <section className="properties-section">
-          <h3>Alojamientos disponibles</h3>
-        </section>
+        <SearchBar />
+        <PropertyList />
       </main>
     </div>
   );
