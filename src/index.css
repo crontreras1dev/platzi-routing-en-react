@@ -217,4 +217,9 @@ img {
   .hero h2 {
     font-size: 1.5rem;
   }
+
+  .search-section {
+    grid-template-columns: 1fr;
+    margin: 1rem 0 2rem;
+  }
 }

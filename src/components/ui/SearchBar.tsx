@@ -13,14 +13,26 @@ export function SearchBar({ value, onChange, onClear }: SearchBarProps) {
 
   return (
     <section className="search-section">
-      <input
-        type="text"
-        placeholder="Buscar por ciudad, tipo o alojamiento"
-        value={value}
-        onChange={handleChange}
-      />
-
-      {value && <button onClick={onClear}>Limpiar</button>}
+      <label>
+        Ciudad
+        <input
+          type="text"
+          placeholder="Santiago, Chile"
+          value={value}
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Tipo
+        <input type="text" placeholder="Apartamento" />
+      </label>
+      <label>
+        Huéspedes
+        <input type="number" placeholder="2" />
+      </label>
+      <button onClick={value ? onClear : undefined}>
+        {value ? "Limpiar" : "Buscar"}
+      </button>
     </section>
   );
 }
