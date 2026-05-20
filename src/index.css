@@ -18,7 +18,12 @@ img {
   min-height: 100vh;
 }
 
+/* ── Header ─────────────────────────────────────── */
+
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #121f3d;
   padding: 1rem 2rem;
   border-bottom: 1px solid #24385b;
@@ -29,20 +34,64 @@ img {
   color: #98ca3f;
 }
 
+.header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  color: #8da2c0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.header nav a:hover {
+  color: #eff3f8;
+}
+
+/* ── Main content ───────────────────────────────── */
+
 .main-content {
   max-width: 1120px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* ── Hero ────────────────────────────────────────── */
+
 .hero {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
   margin-bottom: 2rem;
+  padding: 4rem 2.5rem;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=80")
+      center / cover no-repeat;
+  color: #eff3f8;
+}
+
+.hero .eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #98ca3f;
+  margin: 0 0 0.5rem;
 }
 
 .hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  margin: 0 0 0.5rem;
 }
+
+.hero p:last-child {
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ── Search section ─────────────────────────────── */
 
 .search-section {
   margin-bottom: 2rem;
@@ -54,7 +103,21 @@ img {
   border: 1px solid #24385b;
   border-radius: 999px;
   font-size: 1rem;
+  background: #121f3d;
+  color: #eff3f8;
+  outline: none;
+  transition: border-color 0.2s;
 }
+
+.search-section input:focus {
+  border-color: #98ca3f;
+}
+
+.search-section input::placeholder {
+  color: #8da2c0;
+}
+
+/* ── Properties grid ────────────────────────────── */
 
 .properties-grid {
   display: grid;
@@ -62,11 +125,19 @@ img {
   gap: 1.5rem;
 }
 
+/* ── Property card ──────────────────────────────── */
+
 .property-card {
   background: #121f3d;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .property-card img {
@@ -79,11 +150,34 @@ img {
   padding: 1rem;
 }
 
-.search-section input {
-  background: #0f172a;
-  color: #eff3f8;
+.property-card-content h4 {
+  margin: 0 0 0.25rem;
 }
 
-.search-section input::placeholder {
+.property-card-content p {
+  margin: 0 0 0.5rem;
   color: #8da2c0;
+  font-size: 0.9rem;
+}
+
+.property-card-content strong {
+  color: #98ca3f;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
 }
