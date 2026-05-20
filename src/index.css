@@ -61,49 +61,73 @@ img {
 /* ── Hero ────────────────────────────────────────── */
 
 .hero {
-  position: relative;
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  padding: 4rem 2.5rem;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.75)),
-    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=80")
-      center / cover no-repeat;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2rem;
   color: #eff3f8;
+  border-radius: 2rem;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.85)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+      center/cover;
 }
 
-.hero .eyebrow {
-  font-size: 0.85rem;
+.eyebrow {
+  margin: 0 0 1rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-size: 0.85rem;
   color: #98ca3f;
-  margin: 0 0 0.5rem;
 }
 
 .hero h2 {
-  font-size: 2.25rem;
-  margin: 0 0 0.5rem;
+  max-width: 640px;
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
 }
 
-.hero p:last-child {
+.hero p {
+  max-width: 480px;
   margin: 0;
-  opacity: 0.85;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #becde3;
 }
+
 
 /* ── Search section ─────────────────────────────── */
 
 .search-section {
-  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin: -2rem 1.5rem 2rem;
+  padding: 1rem;
+  position: relative;
+  background: #121f3d;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  color: #eff3f8;
+}
+
+.search-section label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .search-section input {
   width: 100%;
-  padding: 0.9rem 1rem;
+  padding: 0.85rem 1rem;
   border: 1px solid #24385b;
   border-radius: 999px;
-  font-size: 1rem;
-  background: #121f3d;
+  font: inherit;
+  background: #0f172a;
   color: #eff3f8;
   outline: none;
   transition: border-color 0.2s;
@@ -116,6 +140,19 @@ img {
 .search-section input::placeholder {
   color: #8da2c0;
 }
+
+.search-section button {
+  align-self: end;
+  padding: 0.95rem 1.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: #98ca3f;
+  color: #0f172a;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 
 /* ── Properties grid ────────────────────────────── */
 
