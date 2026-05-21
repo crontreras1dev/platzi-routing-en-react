@@ -8,6 +8,7 @@ import { properties } from "./data/properties";
 import { filterProperties } from "./utils/filterProperties";
 
 function App() {
+  const [city, setCity] = useState("");
   const [search, setSearch] = useState("");
   const [propertyList, setPropertyList] = useState<Property[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,9 +38,14 @@ function App() {
         <Hero />
 
         <SearchBar
-          value={search}
-          onChange={setSearch}
-          onClear={() => setSearch("")}
+          value={city}
+          searchedValue={search}
+          onChange={setCity}
+          onSearch={setSearch}
+          onClear={() => {
+            setCity("");
+            setSearch("");
+          }}
         />
 
         {isLoading && <p>Cargando propiedades...</p>}
