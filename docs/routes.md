@@ -22,7 +22,7 @@ Perfil del usuario.
 Pantalla de login simulado.
 
 ## `*`
-Página 404 para rutas no encontradas.
+Comodín para cuando no se encuentre una ruta específica. Muestra una página 404.
 
 ## Tipos de rutas
 
