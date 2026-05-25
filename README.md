@@ -1,23 +1,27 @@
-# Curso de React.js Básico — Clon estilo Platzi-host
+# Curso de Routing en React — Clon estilo Platzi-host
 
-Curso práctico de React.js donde construimos paso a paso la **home** de un clon sencillo inspirado en Platzi-host. La mayor parte del curso se desarrolla con **JavaScript** para enfocarnos en los fundamentos de React. Cerca del final, actualizamos el proyecto a **TypeScript**.
+Curso práctico de React donde continuamos el proyecto del curso básico y convertimos la home de **Platzi-host** en una aplicación multipágina con **React Router v7**.
 
-## Proyecto: Platzi-host
+## Proyecto: Platzi-host Routing
 
 Una aplicación web con:
-- Header principal
-- Sección hero
-- Barra de búsqueda
-- Listado de propiedades con cards reutilizables
-- Filtros simples por ciudad, tipo o texto
-- Estados de carga, error y resultados vacíos
+- Home con hero y propiedades recomendadas
+- Página de resultados de búsqueda
+- Detalle dinámico de propiedades
+- Favoritos, perfil y login simulado
+- Flujo de reserva
+- Query params, rutas protegidas, loaders, lazy loading y manejo de errores por ruta
 
 ## Tecnologías
 
 - React 19
 - Vite
-- JavaScript (clases 1–15)
-- TypeScript (clases 16–18)
+- TypeScript
+- React Router v7 en modo librería
+
+## Base del curso
+
+Este repositorio parte de la última rama del curso anterior: `clase-17/cierre` de `curso-react-basico`.
 
 ## Estructura del curso por ramas
 
@@ -25,39 +29,41 @@ Cada clase tiene su propia rama para que puedas seguir el progreso paso a paso:
 
 | Rama | Clase | Tema |
 |------|-------|------|
-| `clase-01/intro` | 1 | Introducción al curso y al proyecto |
-| `clase-02/setup-proyecto` | 2 | Configuración del proyecto con Vite |
-| `clase-03/estructura-visual` | 3 | Estructura visual de la aplicación |
-| `clase-04/primeros-componentes` | 4 | Primeros componentes en React |
-| `clase-05/props` | 5 | Props en React |
-| `clase-06/datos-mock` | 6 | Datos mock del proyecto |
-| `clase-07/renderizado-listas` | 7 | Renderizado de listas con `.map()` |
-| `clase-08/renderizado-condicional` | 8 | Renderizado condicional |
-| `clase-09/usestate` | 9 | Estado local con `useState` |
-| `clase-10/eventos` | 10 | Manejo de eventos |
-| `clase-11/filtro-basico` | 11 | Filtro básico de propiedades |
-| `clase-12/componentes-controlados` | 12 | Componentes controlados |
-| `clase-13/useeffect` | 13 | Introducción a `useEffect` |
-| `clase-14/loading-error` | 14 | Estados de carga y error |
-| `clase-15/organizacion-refactor` | 15 | Organización de componentes y refactor |
-| `clase-16/typescript-migracion` | 16 | Actualización del proyecto a TypeScript |
-| `clase-17/typescript-tipado` | 17 | Tipando componentes, eventos, estados y funciones |
-| `clase-18/cierre` | 18 | Cierre y entrega del proyecto |
+| `clase-01/bienvenida-routing` | 1 | Bienvenida al curso y por qué necesitamos routing |
+| `clase-02/mapa-rutas` | 2 | Mapa de rutas del clon |
+| `clase-03/react-router` | 3 | Instalación y configuración de React Router v7 |
+| `clase-04/rutas-principales` | 4 | Creación de rutas principales |
+| `clase-05/link-navlink` | 5 | Navegación con Link y NavLink |
+| `clase-06/navegacion-programatica` | 6 | Navegación programática |
+| `clase-07/layout-outlet` | 7 | Layout principal con Outlet |
+| `clase-08/layouts-anidados` | 8 | Layouts anidados para secciones y flujos |
+| `clase-09/params-dinamicos` | 9 | Parámetros dinámicos con useParams |
+| `clase-10/detalle-propiedad` | 10 | Página de detalle de propiedad |
+| `clase-11/not-found` | 11 | Página 404 y estados no encontrados |
+| `clase-12/query-params` | 12 | Query params para búsqueda |
+| `clase-13/filtros-url` | 13 | Sincronización de filtros con la URL |
+| `clase-14/rutas-protegidas` | 14 | Rutas protegidas |
+| `clase-15/login-logout` | 15 | Simulación de login y logout |
+| `clase-16/loaders` | 16 | Loaders y carga de datos por ruta |
+| `clase-17/lazy-loading` | 17 | Lazy loading de páginas |
+| `clase-18/error-element` | 18 | Manejo de errores por ruta |
+| `clase-19/comparativa-routing` | 19 | React Router, TanStack Router y Next.js Routing |
+| `clase-20/cierre` | 20 | Cierre y entrega del proyecto |
 
 ## Cómo usar este repositorio
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/erasmoh/curso-react-basico.git
-   cd curso-react-basico
+   git clone https://github.com/erasmoh/curso-react-routing.git
+   cd curso-react-routing
    ```
 
 2. Cambia a la rama de la clase que quieras revisar:
    ```bash
-   git checkout clase-02/setup-proyecto
+   git checkout clase-03/react-router
    ```
 
-3. Instala dependencias (a partir de la clase 2):
+3. Instala dependencias:
    ```bash
    npm install
    ```
@@ -69,39 +75,24 @@ Cada clase tiene su propia rama para que puedas seguir el progreso paso a paso:
 
 ## Ruta del curso
 
-### Primera parte: React con JavaScript
-- Crear proyecto
-- Componentes
-- Props
-- Listas
-- Estado local
-- Eventos
-- useEffect
-- Organización del proyecto
+### Primera parte: rutas y navegación
+- Diseñar el mapa de rutas
+- Instalar React Router
+- Crear páginas y rutas principales
+- Navegar con Link, NavLink y useNavigate
+- Usar layouts con Outlet
 
-### Parte final: Actualización a TypeScript
-- Cambiar extensiones
-- Tipar datos
-- Tipar props
-- Tipar eventos
-- Tipar estados
+### Segunda parte: datos, protección y performance
+- Rutas dinámicas y páginas de detalle
+- Query params para filtros de búsqueda
+- Rutas protegidas y login simulado
+- Loaders por ruta
+- Lazy loading de páginas
+- Manejo de errores por ruta
 
 ## Datos mock
 
-El proyecto no tiene backend. Usamos datos mock para simular propiedades:
-
-```javascript
-const properties = [
-  {
-    id: 1,
-    title: "Apartamento moderno en Santiago",
-    location: "Santiago, Chile",
-    price: 75,
-    image: "/images/apartment.jpg",
-    type: "Apartamento"
-  }
-];
-```
+El proyecto no tiene backend. Usamos datos mock para simular propiedades y enfocarnos en routing.
 
 ## Licencia
 
