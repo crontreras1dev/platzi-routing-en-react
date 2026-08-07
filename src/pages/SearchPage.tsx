@@ -1,10 +1,5 @@
-import { Header } from "../components/layout/Header";
-
 export const SearchPage = () => {
   return (
-    <>
-      <Header />
-      <h1>Search Page</h1>
-    </>
+    <h1>Search Page</h1>
   );
 };

@@ -1,4 +1,3 @@
-import { Header } from "../components/layout/Header";
 import { useNavigate } from "react-router";
 
 export const LoginPage = () => {
@@ -10,7 +9,6 @@ export const LoginPage = () => {
 
   return (
     <>
-      <Header />
       <div>LoginPage</div>
       <button onClick={ handleLogin }>Login</button>
     </>

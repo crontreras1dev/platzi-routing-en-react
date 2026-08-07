@@ -1,4 +1,5 @@
 import { createBrowserRouter} from "react-router";
+import { MainLayout } from "../layouts/MainLayout";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { SearchPage } from "../pages/SearchPage";
 import { HomePage } from "../pages/HomePage";
@@ -9,27 +10,15 @@ import { ProfilePage } from "../pages/ProfilePage";
 const router = createBrowserRouter ([
   {
     path: "/",
-    element: <HomePage />
-  },
-  {
-    path: "/search",
-    element: <SearchPage />
-  },
-  {
-    path: "*",
-    element: <NotFoundPage />
-  },
-  {
-    path: "favorites",
-    element: <FavoritesPage />
-  },
-  {
-    path: "login",
-    element: <LoginPage />
-  },
-  {
-    path: "profile",
-    element: <ProfilePage />
+    element: <MainLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "/search", element: <SearchPage /> },
+      { path: "favorites", element: <FavoritesPage /> },
+      { path: "login", element: <LoginPage /> },
+      { path: "profile", element: <ProfilePage /> },
+      { path: "*", element: <NotFoundPage /> },
+    ]
   },
 ]);
 

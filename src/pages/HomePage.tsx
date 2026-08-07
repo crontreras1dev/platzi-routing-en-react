@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import type { Property } from "../types/property";
-import { Header } from "../components/layout/Header";
 import { Hero } from "../components/ui/Hero";
 import { SearchBar } from "../components/ui/SearchBar";
 import { PropertyList } from "../components/properties/PropertyList";
@@ -32,8 +31,6 @@ export function HomePage() {
 
   return (
     <div className="app">
-      <Header />
-
       <main className="main-content">
         <Hero />
 

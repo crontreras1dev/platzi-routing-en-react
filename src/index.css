@@ -273,3 +273,10 @@ img {
     margin: 1rem 0 2rem;
   }
 }
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: #8da2c0;
+  font-size: 0.9rem;
+}
