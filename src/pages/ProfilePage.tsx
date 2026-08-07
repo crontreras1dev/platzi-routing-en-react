@@ -1,10 +1,10 @@
 import { Header } from "../components/layout/Header";
 
-export const SearchPage = () => {
+export const ProfilePage = () => {
   return (
     <>
       <Header />
-      <h1>Search Page</h1>
+      <div>ProfilePage</div>
     </>
   );
 };

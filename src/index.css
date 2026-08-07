@@ -46,7 +46,8 @@ img {
   transition: color 0.2s;
 }
 
-.header nav a:hover {
+.header nav a:hover,
+.header nav a.active {
   color: #eff3f8;
 }
 
