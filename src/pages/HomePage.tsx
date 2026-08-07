@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import type { Property } from "./types/property";
-import { Header } from "./components/layout/Header";
-import { Hero } from "./components/ui/Hero";
-import { SearchBar } from "./components/ui/SearchBar";
-import { PropertyList } from "./components/properties/PropertyList";
-import { properties } from "./data/properties";
-import { filterProperties } from "./utils/filterProperties";
+import type { Property } from "../types/property";
+import { Header } from "../components/layout/Header";
+import { Hero } from "../components/ui/Hero";
+import { SearchBar } from "../components/ui/SearchBar";
+import { PropertyList } from "../components/properties/PropertyList";
+import { properties } from "../data/properties";
+import { filterProperties } from "../utils/filterProperties";
 
-function App() {
+export function HomePage() {
   const [city, setCity] = useState("");
   const [search, setSearch] = useState("");
   const [propertyList, setPropertyList] = useState<Property[]>([]);
@@ -59,5 +59,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
