@@ -8,6 +8,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { ProfilePage } from "../pages/ProfilePage";
 import { BookingPage } from "../pages/BookingPage";
 import { BookingLayout } from "../layouts/BookingLayout";
+import { PorpertyDetailPage } from "../pages/PropertyDeatilPage";
 
 const router = createBrowserRouter ([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter ([
       { path: "favorites", element: <FavoritesPage /> },
       { path: "login", element: <LoginPage /> },
       { path: "profile", element: <ProfilePage /> },
+      { path: "property/:id", element: <PorpertyDetailPage /> },
       { 
         path: "booking", 
         element: <BookingLayout />, 
