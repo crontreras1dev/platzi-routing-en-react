@@ -1,7 +1,15 @@
+import { Link } from "react-router";
+
 export const NotFoundPage = () => {
     return (
-        <div>
-            <h1>Not Found Page 😵</h1>
-        </div>
+        <main className="main-content not-found">
+            <h1>404 😵</h1>
+
+            <h2>Página No Encontrada</h2>
+
+            <p>La página que buscas no existe o fue movida</p>
+
+            <Link to="/">Volver al inicio</Link>
+        </main>
     );
 };

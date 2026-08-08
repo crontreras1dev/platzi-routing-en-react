@@ -251,6 +251,56 @@ img {
   color: #98ca3f;
 }
 
+.not-found {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  border: 1px solid #24385b;
+  border-radius: 2rem;
+  background: #121f3d;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.not-found h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.05;
+  color: #98ca3f;
+}
+
+.not-found h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  color: #eff3f8;
+}
+
+.not-found p {
+  margin: 0;
+  color: #becde3;
+  line-height: 1.6;
+}
+
+.not-found a {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0.95rem 1.5rem;
+  border-radius: 999px;
+  background: #98ca3f;
+  color: #0f172a;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.not-found a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(152, 202, 63, 0.25);
+}
+
 .property-detail {
   display: grid;
   grid-template-columns: 420px minmax(320px, 1fr);
