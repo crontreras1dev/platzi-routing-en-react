@@ -251,6 +251,27 @@ img {
   color: #98ca3f;
 }
 
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+
+.booking-flow,
+.booking-summary {
+  padding: 1.5rem;
+  background: #121f3d;
+  border: 1px solid #24385b;
+  border-radius: 1.5rem;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: #8da2c0;
+  font-size: 0.9rem;
+}
+
 /* ── Responsive ─────────────────────────────────── */
 
 @media (max-width: 600px) {
@@ -274,9 +295,3 @@ img {
   }
 }
 
-.footer {
-  padding: 1rem;
-  text-align: center;
-  color: #8da2c0;
-  font-size: 0.9rem;
-}

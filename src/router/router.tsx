@@ -6,6 +6,8 @@ import { HomePage } from "../pages/HomePage";
 import { FavoritesPage } from "../pages/FavoritesPage";
 import { LoginPage } from "../pages/LoginPage";
 import { ProfilePage } from "../pages/ProfilePage";
+import { BookingPage } from "../pages/BookingPage";
+import { BookingLayout } from "../layouts/BookingLayout";
 
 const router = createBrowserRouter ([
   {
@@ -17,6 +19,11 @@ const router = createBrowserRouter ([
       { path: "favorites", element: <FavoritesPage /> },
       { path: "login", element: <LoginPage /> },
       { path: "profile", element: <ProfilePage /> },
+      { 
+        path: "booking", 
+        element: <BookingLayout />, 
+        children: [{ path: ":id", element: <BookingPage /> }] 
+      },
       { path: "*", element: <NotFoundPage /> },
     ]
   },
