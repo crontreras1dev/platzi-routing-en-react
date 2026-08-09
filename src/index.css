@@ -251,6 +251,73 @@ img {
   color: #98ca3f;
 }
 
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 220px auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: #121f3d;
+  border: 1px solid #24385b;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #24385b;
+  border-radius: 999px;
+  font: inherit;
+  background: #0f172a;
+  color: #eff3f8;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filters input::placeholder {
+  color: #8da2c0;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #98ca3f;
+}
+
+.filters select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.75rem;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1.5L6 6.5L11 1.5' stroke='%238da2c0' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1.15rem center;
+  cursor: pointer;
+}
+
+.filters select option {
+  background: #121f3d;
+  color: #eff3f8;
+}
+
+.filters button {
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: #98ca3f;
+  color: #0f172a;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.filters button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(152, 202, 63, 0.25);
+}
+
 .not-found {
   display: grid;
   justify-items: start;
