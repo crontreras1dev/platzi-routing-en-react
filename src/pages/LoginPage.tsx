@@ -1,16 +1,34 @@
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
+import { login } from "../utils/auth";
 
-export const LoginPage = () => {
+type LocationState = {
+  from?: string;
+};
+
+export function LoginPage () {
   const navigate = useNavigate();
+  const location = useLocation();
+  const state = location.state as LocationState || null;
+  const from = state?.from || "/profile"
 
   const handleLogin = () => {
-    navigate("/profile", { replace: true });
+    login();
+    navigate(from, { replace: true });
   };
 
   return (
-    <>
-      <div>LoginPage</div>
-      <button onClick={ handleLogin }>Login</button>
-    </>
+    <main className="main-content">
+      <h1>Iniciar Sesión</h1>
+
+      <p>Login simulado para acceder a rutas privadas</p>
+
+      <button 
+        type="button" 
+        className="btn"
+        onClick={ handleLogin }
+      >
+        Login
+      </button>
+    </main>
   );
 };
